@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="PCFControl" constructor="JSONFetching" version="0.0.1" display-name-key="JSONFetching" description-key="JSONFetching description" control-type="standard" >
+    <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
+    If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be false by default.
+    Example1:
+      <external-service-usage enabled="true">
+        <domain>www.Microsoft.com</domain>
+      </external-service-usage>
+    Example2:
+      <external-service-usage enabled="false">
+      </external-service-usage>
+    -->
+    <external-service-usage enabled="false">
+      <!--UNCOMMENT TO ADD EXTERNAL DOMAINS
+      <domain></domain>
+      <domain></domain>
+      -->
+    </external-service-usage>
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="JSON" display-name-key="JSON Input" description-key="Enter here the Records as JSON" of-type="Multiple" usage="input" required="true" />
+    <property name="Status" display-name-key="Possible Status" description-key="Enter here the Possible Status as Table" of-type="SingleLine.TextArea" usage="input" required="true" />
+    <property name="FluentUIV9Theme" display-name-key="Fulent UI Theme" description-key="Select a Theme your Cards" of-type="Enum" usage="input" required="true">
+      <value 
+      name="Web Light"
+      display-name-key="Web Light Theme">webLightTheme</value>
+    <value 
+      name="Web Dark"
+      display-name-key="Web Dark Theme">webDarkTheme</value>
+    <value 
+      name="Teams Light"
+      display-name-key="Teams Light Theme">teamsLightTheme</value>
+    <value
+      name="Teams Dark"
+      display-name-key="Teams Dark Theme">teamsDarkTheme</value>
+    <value 
+      name="Teams High Contrast"
+      display-name-key="Teams High Contrast">teamsHighContrastTheme</value>
+    </property>
+     <property name="cardSize" display-name-key="Card Size" description-key="Select a Size for your Card" of-type="Enum" usage="input" required="true">
+      <value 
+      name="small"
+      display-name-key="Small Card">small</value>
+    <value 
+      name="medium"
+      display-name-key="Medium Card">medium</value>
+    <value 
+      name="large"
+      display-name-key="Large Card">large</value>
+    </property>
+    <property name="Wrap" display-name-key="Wrap Cards" description-key="Select Wrap Cards" of-type="Enum" usage="input" required="true">
+      <value 
+      name="2 Cards"
+      display-name-key="2 Cards">2</value>
+    <value 
+      name="3 Cards"
+      display-name-key="3 Cards">3</value>
+    <value 
+      name="4 Cards"
+      display-name-key="4 Cards">4</value>
+    </property>
+    <property name="appearance" display-name-key="Card appearance" description-key="Select Card appearance" of-type="Enum" usage="input" required="true">
+      <value 
+      name="filled"
+      display-name-key="filled">filled</value>
+    <value 
+      name="filled-alternative"
+      display-name-key="filled-alternative">filled-alternative</value>
+    <value 
+      name="subtle"
+      display-name-key="subtle">subtle</value>
+    <value 
+      name="outline"
+      display-name-key="outline">outline</value>
+    </property>
+    <!--
+      Property node's of-type attribute can be of-type-group attribute.
+      Example:
+      <type-group name="numbers">
+        <type>Whole.None</type>
+        <type>Currency</type>
+        <type>FP</type>
+        <type>Decimal</type>
+      </type-group>
+      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+    -->
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="CSS/Style.css" order="1" />
+      <!-- UNCOMMENT TO ADD MORE RESOURCES
+      <css path="css/JSONFetching.css" order="1" />
+      <resx path="strings/JSONFetching.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+    -->
+  </control>
+</manifest>

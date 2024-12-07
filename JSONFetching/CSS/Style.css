@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+.cardsContainer {
+  gap: 16px; 
+  display: inline-grid;
+  grid-template-columns: repeat(4, minmax(200px, 900px));
+  padding: 16px;
+}
+
+.Card{
+    width: 100%;
+}
+
+.CardItemsContainer{
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));;    
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Carditem{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    height: 30px;
+}
+

@@ -1,0 +1,12 @@
+[
+  { "Count": 3, "StatusReason": "in progress", "TaskType": "Data Capture" },
+  {"Count": 2, "StatusReason": "ready to start", "TaskType": "Quality Assurance"},
+  { "Count": 3, "StatusReason": "completed", "TaskType": "Quality Assurance" },
+  { "Count": 4, "StatusReason": "backlock", "TaskType": "Quality Assurance" },
+  { "Count": 2, "StatusReason": "backlock", "TaskType": "UX / UI" },
+  { "Count": 2, "StatusReason": "backlock", "TaskType": "Testing" },
+  { "Count": 3, "StatusReason": "completed", "TaskType": "Front end" },
+  { "Count": 4, "StatusReason": "backlock", "TaskType": "Backend" },
+  { "Count": 2, "StatusReason": "backlock", "TaskType": "Data modling" },
+  { "Count": 2, "StatusReason": "backlock", "TaskType": "Deployment" }
+]
